@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Expense Tracker</h2>
+    <form id="expenseForm">
+        <label>Description:</label>
+        <input type="text" id="desc"><br><br>
+
+        <label>Amount:</label>
+        <input type="text" id="amount"><br><br>
+
+        <label>Category:</label>
+        <input type="text" id="category"><br><br>
+
+        <button type="button" onclick="addExpense()">Add Expense</button>
+        <button type="button" onclick="resetAll()">Reset</button>
+    </form>
+
+    <h3>Expense List</h3>
+    <table id="expenseTable">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <p id="total">Total: $0</p>
+
+    <h3>Filter by Category</h3>
+    <input type="text" id="filterCategory" placeholder="Enter category">
+    <button type="button" onclick="filterExpenses()">Filter</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
